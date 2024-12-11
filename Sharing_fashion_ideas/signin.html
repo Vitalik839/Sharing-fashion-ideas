@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zxx">
+<head>
+<meta charset="UTF-8">
+<title>Home Page</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link href="css/styles.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body class="signin">
+
+<header>
+
+  <ul>
+  <li class="sign"><a class= "signup"href="signup.html">Sign up</a></li>
+  <li class="sign"><a class= "signin"href="signin.html">Sign in</a></li>
+  </ul>
+
+<p class="username">USERNAME: Guest</p>
+    
+  <nav id="primary">
+                   <ul>
+                       <li class="baranimation"><a href="index.html">HOME</a></li>
+                       <li class="baranimation"><a href="filter.html">FILTER</a>
+                         <ul class="drop-down">
+                             <li class="baranimation"><a href="art-filter.html">ART</a></li>
+                             <li class="baranimation"><a href="music-filter.html">MUSIC</a></li>
+
+                         </ul>
+
+                       </li>
+                       <li class="baranimation"><a href="upload.html">UPLOAD</a></li>
+                       <li class="baranimation"><a href="about.html">ABOUT</a></li>
+
+                   </ul>
+
+               </nav>
+
+               <img src="" alt="">
+        </header>
+
+<form action="index.html" action="/login" method="post">
+
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#ffffff;">
+      <button type="cancel" onclick="window.location='index.html'; return false;" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+  <footer>
+<ul>
+    <li>Copyright 2024 &copy;</li>
+    <li>All Rights Reserved</li>
+    <li>Web Design by Vitaliy Novakovskyi</li>
+
+
+    </ul>
+
+</footer>
+
+</body>
+
+</html>

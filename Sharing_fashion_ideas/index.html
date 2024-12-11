@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zxx">
+<head>
+<meta charset="UTF-8">
+<title>Sharing fashion ideas</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link href="css/styles.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body class="home">
+
+<header>
+
+<ul>
+<li class="sign"><a class= "signup"href="signup.html">Sign up</a></li>
+<li class="sign"><a class= "signin"href="signin.html">Sign in</a></li>
+</ul>
+
+<p class="username">USERNAME: Guest</p>
+
+  <nav id="primary">
+                   <ul>
+                       <li class="baranimation"><a href="index.html">HOME</a></li>
+                       <li class="baranimation"><a href="filter.html">FILTER</a>
+                         <ul class="drop-down">
+                             <li class="baranimation"><a href="art-filter.html">ART</a></li>
+                             <li class="baranimation"><a href="music-filter.html">MUSIC</a></li>
+
+                         </ul>
+
+                       </li>
+                       <li class="baranimation"><a href="upload.html">UPLOAD</a></li>
+                       <li class="baranimation"><a href="about.html">ABOUT</a></li>
+
+                   </ul>
+
+               </nav>
+
+        </header>
+
+    <p class="weeklyhits animated animatedFadeInUp fadeInUp">WEEKLY HITS</p>
+
+<footer>
+<ul>
+    <li>Copyright 2024 &copy;</li>
+    <li>All Rights Reserved</li>
+    <li>Web Design by Vitaliy Novakovskyi</li>
+</ul>
+
+</footer>
+
+</body>
+<script>
+  const posts = [
+    {
+      profilePic: "img/user_img/profile1.jpg",
+      username: "mariab4292",
+      date: "28/11/2024",
+      postImage: "img/post_img/download.jpg",
+      description: "This was a total of 37 hours of drawing, can't believe I finished this in a week!",
+      type: "art"
+    },
+    {
+      profilePic: "img/user_img/profile2.jpg",
+      username: "creative_jane",
+      date: "27/11/2024",
+      postImage: "img/post_img/download2.jpg",
+      description: "Experimenting with new styles, what do you think? Feedback appreciated!",
+      type: "art"
+    },
+    {
+      profilePic: "img/user_img/profile3.jpg",
+      username: "artlover92",
+      date: "26/11/2024",
+      postImage: "img/post_img/download3.jpg",
+      description: "My latest landscape painting. Inspired by the beauty of nature around me.",
+      type: "art"
+    },
+    {
+      profilePic: "img/user_img/profile4.jpg",
+      username: "fashionista101",
+      date: "25/11/2024",
+      postImage: "img/post_img/download4.jpg",
+      description: "Loving this outfit combination! Thoughts?",
+      type: "art"
+    },
+    {
+      profilePic: "img/user_img/profile5.jpg",
+      username: "photo_enthusiast",
+      date: "24/11/2024",
+      postImage: "img/post_img/download5.jpg",
+      description: "Captured this beautiful sunset yesterday.",
+      type: "art"
+    },
+    {
+      profilePic: "img/user_img/profile6.jpg",
+      username: "musician_life",
+      date: "23/11/2024",
+      postImage: "img/post_img/download6.jpg",
+      description: "Finished composing a new melody. Give it a listen!",
+      type: "art"
+    },
+    {
+      profilePic: "img/user_img/profile7.jpg",
+      username: "tech_guru",
+      date: "22/11/2024",
+      postImage: "img/post_img/download7.jpg",
+      description: "Testing out a new piece of tech. It's amazing so far!",
+      type: "art"
+    },
+    {
+      profilePic: "img/user_img/profile8.jpg",
+      username: "travel_bug",
+      date: "21/11/2024",
+      postImage: "img/post_img/download8.jpg",
+      description: "This place is absolutely breathtaking. Highly recommend visiting!",
+      type: "art"
+    },
+    {
+      profilePic: "img/user_img/profile9.jpg",
+      username: "fitness_freak",
+      date: "20/11/2024",
+      postImage: "img/post_img/download9.jpg",
+      description: "Pushing myself harder every day. Workout vibes!",
+      type: "art"
+    },
+    {
+      profilePic: "img/user_img/profile10.jpg",
+      username: "bookworm88",
+      date: "19/11/2024",
+      postImage: "img/post_img/download10.jpg",
+      description: "Just finished this book, and it's an absolute masterpiece!",
+      type: "art"
+    }
+];
+
+  // Контейнер для постів
+  const container = document.querySelector("body");
+  function generatePosts(posts) {
+  const footer = document.querySelector("footer");
+
+  // Перебираємо кожен пост і генеруємо HTML
+  posts.forEach(post => {
+    const postHTML = `
+      <div class="wrapper animated animatedFadeInUp fadeInUp">
+        <div class="box-shadow">
+          <div class="about">
+            <img align="center" class="profile round" src="${post.profilePic}" height="50px" width="50px" alt="profile pic">
+            <p class="firstClass">${post.username}</p>
+            <p class="secondClass">${post.date}</p>
+          </div>
+          <figure align="center" class="audioborder">
+            <img class="post" src="${post.postImage}" alt="Post Image" width="300" height="300">
+          </figure>
+          <p class="desctitle">DESCRIPTION
+            <label for="id-of-input" class="custom-checkbox">
+              <input type="checkbox" id="id-of-input"/>
+              <i class="glyphicon glyphicon-star-empty"></i>
+              <i class="glyphicon glyphicon-star"></i>
+            </label>
+          </p>
+          <p class="desc border">${post.description}</p>
+        </div>
+      </div>`;
+    
+    // Вставка посту перед футером
+    footer.insertAdjacentHTML("beforebegin", postHTML);
+  });
+}
+
+  // Генерація постів при завантаженні сторінки
+  generatePosts(posts);
+  function filterPosts(type) {
+  const filteredPosts = posts.filter(post => post.type === type);
+  document.querySelectorAll('.wrapper').forEach(wrapper => wrapper.remove()); // Видаляємо попередні пости
+  generatePosts(filteredPosts); // Генеруємо нові
+}
+
+</script>
+
+</html>
